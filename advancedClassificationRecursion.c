@@ -8,7 +8,7 @@
 #include <stdio.h>
 
 /*implementation of isArmstrong function*/
-int pow(int x,int y){
+int powInt(int x,int y){
     int count = 1;
     for(int i=0; i<y;i++){
         count = count*x;
@@ -24,7 +24,7 @@ int Armstrong(int x, int len)
     }
     if (x > 0)
     {
-        return (pow(x % 10, len) + Armstrong(x / 10, len));
+        return (powInt(x % 10, len) + Armstrong(x / 10, len));
     }
     return 0;
 }

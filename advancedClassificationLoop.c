@@ -8,7 +8,7 @@
 #include <stdio.h>
 
 /*implementation of isArmstrong function*/
-int pow(int x,int y){
+int powInt(int x,int y){
     int count = 1;
     for(int i=0; i<y;i++){
         count = count*x;
@@ -31,7 +31,7 @@ int isArmstrong(int x)
     while (tempX != 0)
     {
         temp = tempX % 10;
-        sum += pow(temp, power);
+        sum += powInt(temp, power);
         tempX /= 10;
     }
     if (sum == x)
