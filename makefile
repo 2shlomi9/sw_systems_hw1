@@ -10,9 +10,9 @@ FLAGS= -g -Wall
 basicClassifigication.o: basicClassification.c $(HEADER)
 	$(CC) $(FLAGS) -fPIC -c basicClassification.c
 advancedClassificationLoop.o: advancedClassificationLoop.c $(HEADER)
-	$(CC) $(FLAGS) -fPIC -c advancedClassificationLoop.c -lm
+	$(CC) $(FLAGS) -fPIC -c advancedClassificationLoop.c 
 advancedClassificationRecursion.o: advancedClassificationRecursion.c $(HEADER)
-	$(CC) $(FLAGS) -fPIC -c advancedClassificationRecursion.c -lm
+	$(CC) $(FLAGS) -fPIC -c advancedClassificationRecursion.c 
 main.o: main.c $(HEADER)
 	$(CC) $(FLAGS) -c main.c
 	
@@ -32,11 +32,11 @@ libclassrec.so: $(OBJECTS_REC)
 	$(CC) -shared -o libclassrec.so $(OBJECTS_REC) 
 
 mains: $(OBJECTS_MAIN) libclassrec.a
-	$(CC) $(FLAGS) -o mains $(OBJECTS_MAIN) libclassrec.a -lm
+	$(CC) $(FLAGS) -o mains $(OBJECTS_MAIN) libclassrec.a 
 maindloop: $(OBJECTS_MAIN) libclassloops.so
-	$(CC) $(FLAGS) -o maindloop $(OBJECTS_MAIN) ./libclassloops.so -lm
+	$(CC) $(FLAGS) -o maindloop $(OBJECTS_MAIN) ./libclassloops.so 
 maindrec: $(OBJECTS_MAIN) libclassrec.so
-	$(CC) $(FLAGS) -o maindrec $(OBJECTS_MAIN) ./libclassrec.so -lm
+	$(CC) $(FLAGS) -o maindrec $(OBJECTS_MAIN) ./libclassrec.so 
 
 .PHONY: clean all 
 

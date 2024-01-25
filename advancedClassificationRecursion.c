@@ -6,9 +6,15 @@
 /*#include NumClass.h : NumClass.h file include The declarations of the functions*/
 #include "NumClass.h"
 #include <stdio.h>
-#include <math.h>
 
 /*implementation of isArmstrong function*/
+int pow(int x,int y){
+    int count = 1;
+    for(int i=0; i<y;i++){
+        count = count*x;
+    }
+    return count;
+}
 
 int Armstrong(int x, int len)
 {

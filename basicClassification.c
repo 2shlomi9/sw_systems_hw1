@@ -25,8 +25,7 @@ return 1;
 int Factorial(int x)
 {
     int fact = 1;
-    int i;
-    for (i = 1; i <= x; i++)
+    for (int i = 1; i <= x; i++)
     {
         fact *= i;
     }
